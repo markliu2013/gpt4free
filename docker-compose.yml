@@ -8,8 +8,11 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     volumes:
-      - .:/app
+      - gpt4free_data:/app
     ports:
       - '8080:8080'
       - '1337:1337'
       - '7900:7900'
+
+volumes:
+  gpt4free_data:
